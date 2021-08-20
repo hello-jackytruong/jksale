@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <main class="site-main">
+    
+    <!-- ================ trending product section start ================= -->  
+    <section class="section-margin calc-60px">
+      <div class="container">
+        <div class="section-intro pb-60px">
+          <h2>Image <span class="section-intro__style">Media</span></h2>
+        </div>
+        <div class="row">
+        {% for image_item in image_media %}
+        
+          <div class="col-md-4 col-lg-3 col-xl-2">
+            <div class="card text-center card-product">
+              <div class="card-product__img">
+                <img class="card-img" src="{{ image_item.image.url }}" alt="">
+                <ul class="card-product__imgOverlay">
+                  <li><button><i class="ti-search"></i></button></li>
+                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button><i class="ti-heart"></i></button></li>
+                </ul>
+              </div>
+                <ul>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand"><label for="men">{{ image_item.title|slice:"15" }}</label></li>
+                </ul>
+              {% comment %} <div class="card-body">
+                <p>Accessories</p>
+                <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
+                <p class="card-product__price">$150.00</p>
+              </div> {% endcomment %}
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- ================ trending product section end ================= -->  
+
+
+
+  </main>
+{% endblock content %}
