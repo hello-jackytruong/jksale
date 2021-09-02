@@ -87,3 +87,4 @@
 -   AuthorizationKey
 
 
+https://bdd-data-storage-release.s3.us-west-2.amazonaws.com/bdd100k/2021/bdd100k_images_100k.zip
